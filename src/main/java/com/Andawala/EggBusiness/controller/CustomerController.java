@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "*")
 @RequestMapping("/api")
 public class CustomerController {
 
@@ -23,6 +23,9 @@ public class CustomerController {
         customer1.setFullName(customer.getFullName());
         customer1.setMobileNumber(customer.getMobileNumber());
         customer1.setAddress(customer.getAddress());
+        customer1.setProduct(customer.getProduct());
+        customer1.setQuantity(customer.getQuantity());
+        customer1.setPrice(customer.getPrice());
         customerService.save(customer1);
     }
 

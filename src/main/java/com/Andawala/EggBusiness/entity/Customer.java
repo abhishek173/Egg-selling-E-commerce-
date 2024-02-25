@@ -14,15 +14,21 @@ public class Customer {
     private String fullName;
     private String mobileNumber;
     private String address;
+    private String product;
+    private Integer quantity;
+    private Long price;
 
     public Customer() {
     }
 
-    public Customer(Long userId, String fullName, String mobileNumber, String address) {
+    public Customer(Long userId, String fullName, String mobileNumber, String address, String product, Integer quantity, Long price) {
         this.userId = userId;
         this.fullName = fullName;
         this.mobileNumber = mobileNumber;
         this.address = address;
+        this.product = product;
+        this.quantity = quantity;
+        this.price = price;
     }
 
     public Long getUserId() {
@@ -55,5 +61,29 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getProduct() {
+        return product;
+    }
+
+    public void setProduct(String product) {
+        this.product = product;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public Long getPrice() {
+        return price;
+    }
+
+    public void setPrice(Long price) {
+        this.price = price;
     }
 }
